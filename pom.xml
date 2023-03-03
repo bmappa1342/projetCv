@@ -93,6 +93,7 @@
             </plugin>
 
         </plugins>
+        <finalName>projet-cv-image</finalName>
 	</build>
 
 </project>
