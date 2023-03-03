@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajout CV</title>
+  <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/app.css}">
+</head>
+<body>
+<div layout:fragment="content1">
+<div class="col-md-6 offset-3">
+  <form th:action="@{/addCv}" method="post">
+    <div>
+      <label for="nom">Nom</label>
+      <input id="nom" class="form-control" type="text" name="nom" th:value="${demandeur.nom}">
+      <span class="text-danger" th:errors="${demandeur.nom}"></span>
+    </div>
+    <div>
+      <label for="prenom">Prenom</label>
+      <input id="prenom" class="form-control" type="text" name="prenom" th:value="${demandeur.prenom}">
+      <span class="text-danger" th:errors="${demandeur.prenom}"></span>
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input id="email" class="form-control" type="email" name="email" th:value="${demandeur.email}">
+      <span class="text-danger" th:errors="${demandeur.email}"></span>
+    </div>
+    <div>
+      <label for="adresse">adresse</label>
+      <input id="adresse" class="form-control" type="text" name="adresse" th:value="${demandeur.adresse}">
+      <span class="text-danger" th:errors="${demandeur.adresse}"></span>
+    </div>
+    <div>
+      <label for="age">age</label>
+      <input id="age" class="form-control" type="number" name="age" th:value="${demandeur.age}">
+      <span class="text-danger" th:errors="${demandeur.age}"></span>
+    </div>
+    <div>
+      <label for="telephone">telephone</label>
+      <input id="telephone" class="form-control" type="text" name="telephone" th:value="${demandeur.telephone}">
+      <span class="text-danger" th:errors="${demandeur.telephone}"></span>
+    </div>
+    <div>
+      <label for="specialite">specialite</label>
+      <input id="specialite" class="form-control" type="text" name="specialite" th:value="${demandeur.specialite}">
+      <span class="text-danger" th:errors="${demandeur.specialite}"></span>
+    </div>
+    <div>
+      <label for="niveauEtude">niveauEtude</label>
+      <input id="niveauEtude" class="form-control" type="text" name="niveauEtude" th:value="${demandeur.niveauEtude}">
+      <span class="text-danger" th:errors="${demandeur.niveauEtude}"></span>
+    </div>
+    <div>
+      <label for="experienceProfessionnelle">experienceProfessionnelle</label>
+      <input id="experienceProfessionnelle" class="form-control" type="text" name="experienceProfessionnelle" th:value="${demandeur.experienceProfessionnelle}">
+      <span class="text-danger" th:errors="${demandeur.experienceProfessionnelle}"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+  </form>
+</div>
+</div>
+</body>
+</html>
+
