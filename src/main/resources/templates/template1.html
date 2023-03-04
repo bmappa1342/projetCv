@@ -18,7 +18,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-          Offre
+          Offres
         </a>
         <ul class="dropdown-menu">
           <li sec:authorize="hasAuthority('ADMIN')"><a class="dropdown-item" th:href="@{/admin/formoffre}">Nouveau</a></li>
@@ -27,7 +27,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-          Categorie
+          Categories
         </a>
         <ul class="dropdown-menu">
           <li sec:authorize="hasAuthority('ADMIN')"><a class="dropdown-item" th:href="@{/admin/formcategorie}">Nouveau</a></li>
@@ -36,7 +36,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-          CV
+          Curriculum Vitae
         </a>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" th:href="@{/user/formCv}">Nouveau</a></li>
